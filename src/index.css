@@ -293,6 +293,40 @@ h1 {
     text-shadow: 0.5px 0.5px 2px black;
 }
 
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-list-element {
+    margin: 0.5rem 0rem;
+    border: 1px solid #b9b6b6;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px;
+    width: 250px;
+    padding-left: 20px;
+    background-color: #fef7e5;
+}
+
+.contact-list-element-number {
+    bottom: 7px;
+    position: relative;
+    margin-left: 10px;
+    font-family: 'Montserrat', serif;
+}
+
+.contact-list-element-a {
+    text-decoration: none;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-send-message {
+    margin-top: 0px;
+}
+
 @media (max-width: 868px) {
     .nav-elements ul li:not(:last-child) {
         margin-right: 30px;
@@ -357,5 +391,23 @@ h1 {
     .container-recorrido {
         display: flex;
         flex-direction: column;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-list {
+        padding-inline-start: 10px;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: auto;
+    }
+
+    .contact-send-message {
+        margin-top: 15px;
     }
 }

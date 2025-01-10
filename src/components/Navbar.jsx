@@ -82,7 +82,7 @@ function Navbar({ items }) {
                         </li>
 
                         <li>
-                            <Link className='navbar-item' to='/projects'>
+                            <Link className='navbar-item' to='/contacto'>
                                 Contacto
                             </Link>
                         </li>

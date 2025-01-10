@@ -14,6 +14,7 @@ import './App.css';
 import Travesia from './components/Travesia';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Contacto from './components/Contacto';
 
 const App = () => {
     const [items, setItems] = useState([]);
@@ -43,11 +44,11 @@ const App = () => {
                 className='content'
                 style={{ minHeight: 'calc(100vh - 100px)' }}>
                 <Routes>
-                    <Route path='/' element={<Rebuild />} />
-                    <Route path='/test' element={<Home items={items} />} />
+                    <Route path='/' element={<Home items={items} />} />
 
                     {/* Dynamic Route for Item Details */}
                     <Route path='/:id' element={<Travesia items={items} />} />
+                    <Route path='/contacto' element={<Contacto />}></Route>
                 </Routes>
             </div>
             <Footer />
@@ -55,21 +56,15 @@ const App = () => {
     );
 };
 
-const Rebuild = () => {
-    return (
-        <>
-            <img src={logo} className='logo' alt='4x4 sin limite logo' />
-            <h4>sitio en renovación</h4>
-        </>
-    );
-};
 const Home = ({ items }) => {
     console.log('items de home', items);
     return (
         <>
-            <h1>home</h1>
+            <h1>4x4 Sin Limite</h1>
+            <img src={logo} className='logo' alt='4x4 sin limite logo' />
+            <h4>sitio en renovación</h4>
             <div>
-                <h1>Item List</h1>
+                <h1>Salidas</h1>
                 <ul>
                     {items.map((item) => (
                         <li key={item.url}>
