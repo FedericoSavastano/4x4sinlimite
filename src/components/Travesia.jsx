@@ -83,7 +83,7 @@ function Travesia({ items }) {
                 <li>116-503-6451</li>
                 <li>info@4x4sinlimite.com.ar</li>
             </ul>
-            <Form name-travesia={data.nombre}></Form>
+            <Form nametravesia={data.nombre}></Form>
             <h4 className='titulo-seccion'>Agradecimientos</h4>
             <h4 className='titulo-seccion'>fecha de cierre : {data.cierre}</h4>
         </>

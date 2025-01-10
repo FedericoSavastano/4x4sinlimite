@@ -9,6 +9,8 @@ function Form({ nametravesia }) {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        console.log(form.current.name_travesia.value);
+        console.log('nametravesia', nametravesia);
         if (
             form.current.from_name.value &&
             form.current.from_email.value &&
@@ -89,8 +91,8 @@ function Form({ nametravesia }) {
                         <input
                             type='text'
                             placeholder={nametravesia}
-                            name='name-travesia'
-                            id='name-travesia'
+                            name='name_travesia'
+                            id='name_travesia'
                             value={nametravesia}
                             style={{ display: 'none' }}
                         />
