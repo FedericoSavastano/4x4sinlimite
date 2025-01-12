@@ -327,6 +327,28 @@ h1 {
     margin-top: 0px;
 }
 
+/* LOGO GRID */
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px; /* Adjust spacing between items */
+    justify-items: center; /* Center logos horizontally */
+    align-items: center; /* Center logos vertically */
+}
+
+.logo-item img {
+    display: block;
+    object-fit: contain; /* Ensures logos fit within the defined size */
+    width: 100%;
+    height: 100%;
+}
+
+.img-x {
+    -webkit-filter: drop-shadow(0px 0px 0.7px black);
+    filter: drop-shadow(0px 0px 0.7px black);
+}
+
 @media (max-width: 868px) {
     .nav-elements ul li:not(:last-child) {
         margin-right: 30px;
@@ -399,7 +421,13 @@ h1 {
     }
 
     .contact-list {
-        padding-inline-start: 10px;
+        padding-inline-start: 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact input,

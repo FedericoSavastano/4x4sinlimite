@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import Map from './Map';
 import fondo from '../assets/fond1.jpg';
 import Form from './Form';
+import LogoGrid from './LogoGrid';
 
 function Travesia({ items }) {
     const { id } = useParams();
@@ -159,6 +160,7 @@ function Travesia({ items }) {
                 Cierre de inscripción : {data.cierre.replaceAll('"', '')}
             </h4>
             <h4 className='titulo-seccion'>Agradecimientos</h4>
+            <LogoGrid />
         </>
     );
 }
