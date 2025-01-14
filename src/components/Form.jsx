@@ -94,6 +94,7 @@ function Form({ nametravesia }) {
                             name='name_travesia'
                             id='name_travesia'
                             value={nametravesia}
+                            readOnly
                             style={{ display: 'none' }}
                         />
                         <textarea

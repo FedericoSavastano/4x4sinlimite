@@ -3,6 +3,7 @@ import Map from './Map';
 import fondo from '../assets/fond1.jpg';
 import Form from './Form';
 import LogoGrid from './LogoGrid';
+import ImagesGrid from './ImagesGrid';
 
 function Travesia({ items }) {
     const { id } = useParams();
@@ -18,16 +19,19 @@ function Travesia({ items }) {
                 <h1 className='centered'>{data.nombre}</h1>
                 <h1 className='centered-date'>{data.fecha}</h1>
             </div>
+
+            <ImagesGrid src1={data.imagen1} src2={data.imagen2}></ImagesGrid>
             <h2 className='titulo-travesia'>{data.subnombre}</h2>
             <h3 className='titulo-travesia'>
                 {data.nombre} - {data.fecha}
             </h3>
             <p>{data.descripcion}</p>
-            {/* <div>foto - foto</div> */}
+
             <h4 className='titulo-seccion'>Punto de encuentro</h4>
             <p>{data.encuentro}</p>
             <Map value={id}></Map>
             <p></p>
+
             <div>
                 <h4 className='titulo-seccion'>Cronograma</h4>
                 <div className='container-recorrido'>
@@ -49,6 +53,7 @@ function Travesia({ items }) {
                     ))}
                 </div>
             </div>
+
             <h4 className='titulo-seccion'>Incluye</h4>
             <ul>
                 <li> Alojamiento en hotel</li>
@@ -64,6 +69,8 @@ function Travesia({ items }) {
                 <li>Radio VHF (Si no tenés, te prestamos)</li>
                 <li>Pala, Eslinga, Medidor de presión de cubiertas</li>
             </ul>
+
+            <ImagesGrid src1={data.imagen3} src2={data.imagen4}></ImagesGrid>
             <h4 className='titulo-seccion'>¿Qué es una travesía?</h4>
             <p>
                 Es un evento organizado donde cada participante viene con su
@@ -98,6 +105,7 @@ function Travesia({ items }) {
                         </li>
                         <li className='contact-list-element'>
                             <Link
+                                target='_blank'
                                 className='contact-list-element-a'
                                 to='https://api.whatsapp.com/send?phone=5491544470027&text=Hola%204x4%20Sin%20L%C3%ADmite%2C%20quiero%20consultar%20por%20la%20Traves%C3%ADa'>
                                 <svg
@@ -115,6 +123,7 @@ function Travesia({ items }) {
 
                         <li className='contact-list-element'>
                             <Link
+                                target='_blank'
                                 className='contact-list-element-a'
                                 to='https://api.whatsapp.com/send?phone=5491165036451&text=Hola%204x4%20Sin%20L%C3%ADmite%2C%20quiero%20consultar%20por%20la%20Traves%C3%ADa'>
                                 <svg
@@ -133,7 +142,8 @@ function Travesia({ items }) {
                         <li className='contact-list-element'>
                             <Link
                                 className='contact-list-element-a'
-                                to='href="mailto:info@4x4sinlimite.com.ar"'>
+                                to='href="mailto:info@4x4sinlimite.com.ar"'
+                                target='_blank'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='28'
@@ -143,6 +153,38 @@ function Travesia({ items }) {
                                 </svg>
                                 <span className='contact-list-element-number'>
                                     info@4x4sinlimite.com.ar
+                                </span>
+                            </Link>{' '}
+                        </li>
+                        <li className='contact-list-element'>
+                            <Link
+                                className='contact-list-element-a'
+                                to='https://www.instagram.com/4x4sinlimite'
+                                target='_blank'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='28'
+                                    viewBox='0 0 448 512'>
+                                    <path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z' />
+                                </svg>
+                                <span className='contact-list-element-number'>
+                                    @4x4sinlimite
+                                </span>
+                            </Link>{' '}
+                        </li>
+                        <li className='contact-list-element'>
+                            <Link
+                                className='contact-list-element-a'
+                                to='https://www.facebook.com/4x4SinLimite'
+                                target='_blank'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='28'
+                                    viewBox='0 0 512 512'>
+                                    <path d='M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z' />
+                                </svg>
+                                <span className='contact-list-element-number'>
+                                    4x4 Sin Limite
                                 </span>
                             </Link>{' '}
                         </li>

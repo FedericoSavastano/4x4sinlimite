@@ -47,14 +47,13 @@ function Navbar({ items }) {
                                 {isDropdownOpen && (
                                     <div className='navbar-dropdown-menu'>
                                         {items.map((item) => (
-                                            <a key={item.url}>
-                                                <Link
-                                                    className='navbar-dropdown-item'
-                                                    onClick={handleClickLink}
-                                                    to={`/${item.url}`}>
-                                                    {item.data[0].nombre}
-                                                </Link>
-                                            </a>
+                                            <Link
+                                                className='navbar-dropdown-item'
+                                                onClick={handleClickLink}
+                                                key={item.url}
+                                                to={`/${item.url}`}>
+                                                {item.data[0].nombre}
+                                            </Link>
                                         ))}
                                     </div>
                                 )}
@@ -69,13 +68,12 @@ function Navbar({ items }) {
 
                                 <div className='navbar-dropdown-menu-desktop'>
                                     {items.map((item) => (
-                                        <a key={item.url}>
-                                            <Link
-                                                className='navbar-dropdown-item'
-                                                to={`/${item.url}`}>
-                                                {item.data[0].nombre}
-                                            </Link>
-                                        </a>
+                                        <Link
+                                            className='navbar-dropdown-item'
+                                            key={item.url}
+                                            to={`/${item.url}`}>
+                                            {item.data[0].nombre}
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
