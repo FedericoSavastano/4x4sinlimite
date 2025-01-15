@@ -54,7 +54,7 @@ const LogoGrid = () => {
                                 width: `${imageSize}px`,
                                 height: `${imageSize}px`,
                             }}
-                            className='img-x'
+                            // className='img-x'
                         />
                     </a>
                 </div>

@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Link,
     useParams,
+    useLocation,
 } from 'react-router-dom';
 import { fetchItems } from './api';
 import logo from './assets/logo-grande-D.png';
@@ -16,6 +17,17 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Contacto from './components/Contacto';
 import Home from './components/Home';
+
+const Wrapper = ({ children }) => {
+    const location = useLocation();
+
+    useLayoutEffect(() => {
+        // Scroll to the top of the page when the route changes
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [location.pathname]);
+
+    return children;
+};
 
 const App = () => {
     const [items, setItems] = useState([]);
@@ -44,13 +56,18 @@ const App = () => {
             <div
                 className='content'
                 style={{ minHeight: 'calc(100vh - 100px)' }}>
-                <Routes>
-                    <Route path='/' element={<Home items={items} />} />
+                <Wrapper>
+                    <Routes>
+                        <Route path='/' element={<Home items={items} />} />
 
-                    {/* Dynamic Route for Item Details */}
-                    <Route path='/:id' element={<Travesia items={items} />} />
-                    <Route path='/contacto' element={<Contacto />}></Route>
-                </Routes>
+                        {/* Dynamic Route for Item Details */}
+                        <Route
+                            path='/:id'
+                            element={<Travesia items={items} />}
+                        />
+                        <Route path='/contacto' element={<Contacto />}></Route>
+                    </Routes>
+                </Wrapper>
             </div>
             <Footer />
         </Router>
