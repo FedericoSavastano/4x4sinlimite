@@ -43,6 +43,39 @@ h1 {
     margin: 0px 0px 4em 0px;
 }
 
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #f1d413;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20%;
+}
+
+.loader-logo {
+    width: 250px;
+    margin: 30px 0px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /*NAVBAR*/
 
 .navbar-dropdown {
@@ -347,6 +380,9 @@ h1 {
     gap: 20px;
 }
 
+.travesia-video {
+    width: 500px;
+}
 /* HOME */
 
 .titulo-home {
@@ -385,9 +421,10 @@ h1 {
 .salidas-item img {
     display: block;
     object-fit: cover; /* Ensures logos fit within the defined size */
-    width: auto;
+    width: 30vw;
+    /*width: auto;
     max-height: 30rem;
-    min-height: 20rem;
+    min-height: 20rem; */
     border-radius: 5px;
 }
 
@@ -650,5 +687,9 @@ h1 {
     .video-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .travesia-video {
+        width: 100%;
     }
 }

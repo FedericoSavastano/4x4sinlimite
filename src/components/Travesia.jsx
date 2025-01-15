@@ -89,14 +89,14 @@ function Travesia({ items }) {
             </p>
             <div style={{ textAlign: 'center' }}>
                 <iframe
-                    width='560'
-                    height='315'
+                    // width='100%'
+                    className='travesia-video'
+                    height='300'
                     src={item.data[0].video}
                     title='YouTube video player'
-                    frameborder='0'
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                    referrerpolicy='strict-origin-when-cross-origin'
-                    allowfullscreen></iframe>
+                    referrerPolicy='strict-origin-when-cross-origin'
+                    allowFullScreen></iframe>
             </div>
             <h4 className='titulo-seccion'>Contacto</h4>
             <div className='contact-wrapper'>

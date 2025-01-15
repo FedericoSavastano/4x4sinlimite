@@ -17,6 +17,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Contacto from './components/Contacto';
 import Home from './components/Home';
+import Loading from './components/Loading';
 
 const Wrapper = ({ children }) => {
     const location = useLocation();
@@ -48,7 +49,7 @@ const App = () => {
         loadItems();
     }, []);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <Loading></Loading>;
 
     return (
         <Router>
@@ -59,6 +60,8 @@ const App = () => {
                 <Wrapper>
                     <Routes>
                         <Route path='/' element={<Home items={items} />} />
+
+                        <Route path='/spin' element={<Loading />} />
 
                         {/* Dynamic Route for Item Details */}
                         <Route
