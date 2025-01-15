@@ -39,6 +39,10 @@ h1 {
     gap: 16px; /* Spacing between items */
 }
 
+.section {
+    margin: 0px 0px 4em 0px;
+}
+
 /*NAVBAR*/
 
 .navbar-dropdown {
@@ -306,6 +310,7 @@ h1 {
     width: 250px;
     padding-left: 20px;
     background-color: #fef7e5;
+    color: black;
 }
 
 .contact-list-element-number {
@@ -317,6 +322,7 @@ h1 {
 
 .contact-list-element-a {
     text-decoration: none;
+    color: black;
 }
 
 .contact-list-element-a:hover {
@@ -335,6 +341,12 @@ h1 {
     margin-top: 0px;
 }
 
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 /* HOME */
 
 .titulo-home {
@@ -344,8 +356,8 @@ h1 {
 
 .salidas-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 16px; /* Adjust spacing between items */
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 2%;
     justify-items: center; /* Center logos horizontally */
     align-items: center; /* Center logos vertically */
     margin-bottom: 2rem;
@@ -374,7 +386,8 @@ h1 {
     display: block;
     object-fit: cover; /* Ensures logos fit within the defined size */
     width: auto;
-    height: 450px;
+    max-height: 30rem;
+    min-height: 20rem;
     border-radius: 5px;
 }
 
@@ -419,6 +432,28 @@ h1 {
     font-style: italic;
 }
 
+.crono-nombre {
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    color: black;
+}
+
+.crono-nombre a {
+    text-decoration: none;
+}
+
+.crono-desc {
+    margin-bottom: 2rem;
+    margin-top: 5px;
+}
+
+.crono-fecha {
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    margin-block-end: 5px;
+}
+
 /* LOGO GRID */
 
 .logo-grid {
@@ -446,8 +481,8 @@ h1 {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 16px; /* Adjust spacing between items */
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 5%; /* Adjust spacing between items */
     justify-items: center; /* Center logos horizontally */
     align-items: center; /* Center logos vertically */
     padding: 2em 0px;
@@ -456,8 +491,8 @@ h1 {
 .image-item img {
     display: block;
     object-fit: cover; /* Ensures logos fit within the defined size */
-    width: 500px;
-    height: 300px;
+    width: 35vw;
+    /* height: 300px; */
     border-radius: 5px;
 }
 
@@ -583,5 +618,37 @@ h1 {
     .image-item img {
         width: 80vw;
         height: auto;
+    }
+
+    .salidas-item img {
+        display: block;
+        object-fit: cover; /* Ensures logos fit within the defined size */
+        width: 300px;
+        height: 300px;
+
+        border-radius: 5px;
+    }
+
+    .salidas-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 0.2em 0px 2em 0px;
+    }
+
+    .logo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo-home {
+        width: 200px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }

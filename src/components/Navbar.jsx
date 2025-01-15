@@ -19,6 +19,10 @@ function Navbar({ items }) {
         showNavbar && setShowNavbar(false);
     };
 
+    const handleClickButton = () => {
+        showNavbar && setShowNavbar(false);
+    };
+
     return (
         <nav className='navbar'>
             <div className='container'>
@@ -33,7 +37,10 @@ function Navbar({ items }) {
                 <div className={`nav-elements  ${showNavbar && 'active'}`}>
                     <ul>
                         <li>
-                            <Link className='navbar-item' to='/'>
+                            <Link
+                                className='navbar-item'
+                                to='/'
+                                onClick={handleClickButton}>
                                 Inicio
                             </Link>
                         </li>
@@ -80,7 +87,10 @@ function Navbar({ items }) {
                         </li>
 
                         <li>
-                            <Link className='navbar-item' to='/contacto'>
+                            <Link
+                                className='navbar-item'
+                                to='/contacto'
+                                onClick={handleClickButton}>
                                 Contacto
                             </Link>
                         </li>

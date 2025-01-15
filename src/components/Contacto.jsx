@@ -65,7 +65,7 @@ function Contacto() {
                         <li className='contact-list-element'>
                             <Link
                                 className='contact-list-element-a'
-                                to='href="mailto:info@4x4sinlimite.com.ar"'
+                                to='mailto:info@4x4sinlimite.com.ar'
                                 target='_blank'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'

@@ -83,6 +83,21 @@ function Travesia({ items }) {
                 divertidos, si no tenés experiencia, no te preocupes, nosotros
                 vamos a ir guiando y ayudándote en todo lo que necesites.{' '}
             </p>
+
+            <p>
+                Podés ver una travesía como ésta que hicimos el año pasado acá:{' '}
+            </p>
+            <div style={{ textAlign: 'center' }}>
+                <iframe
+                    width='560'
+                    height='315'
+                    src={item.data[0].video}
+                    title='YouTube video player'
+                    frameborder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    referrerpolicy='strict-origin-when-cross-origin'
+                    allowfullscreen></iframe>
+            </div>
             <h4 className='titulo-seccion'>Contacto</h4>
             <div className='contact-wrapper'>
                 <div>
@@ -142,7 +157,8 @@ function Travesia({ items }) {
                         <li className='contact-list-element'>
                             <Link
                                 className='contact-list-element-a'
-                                to='href="mailto:info@4x4sinlimite.com.ar"'
+                                to='mailto:info@4x4sinlimite.com.ar'
+                                href='mailto:info@4x4sinlimite.com.ar'
                                 target='_blank'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
