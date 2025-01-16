@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import fondo from '../assets/fond1.jpg';
 import Contacto from './Contacto';
 import VideosGrid from './VideosGrid';
+import LogoGrid from './LogoGrid';
 
 function Home({ items }) {
     console.log('items en home ', items);
@@ -105,6 +106,11 @@ function Home({ items }) {
 
             <section className='section'>
                 <Contacto></Contacto>
+            </section>
+
+            <section className='section'>
+                <h4 className='titulo-seccion'>Agradecimientos</h4>
+                <LogoGrid />
             </section>
         </>
     );
