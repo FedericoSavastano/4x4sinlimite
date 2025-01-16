@@ -24,8 +24,7 @@ function Home({ items }) {
                 </div>
 
                 <p className='subtitulo-home'>
-                    Recorriendo todo el país desde hace más de 20 años.{' '}
-                    <br></br>
+                    Recorriendo todo el país desde hace 25 años. <br></br>
                     Viví una travesía 4x4 con amigos o en familia, ¡sumate!
                 </p>
             </section>

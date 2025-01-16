@@ -5,6 +5,7 @@ import cafivel from '../assets/logos/cafi.png';
 import shine from '../assets/logos/shine.png';
 import ypf from '../assets/logos/ypf.jpg';
 import weekend from '../assets/logos/weekend.webp';
+import vw from '../assets/logos/vw.png';
 
 const LogoGrid = () => {
     const logos = [
@@ -37,6 +38,11 @@ const LogoGrid = () => {
             src: weekend,
             alt: 'Weekend',
             url: 'https://weekend.perfil.com/',
+        },
+        {
+            src: vw,
+            alt: 'VolksWagen',
+            url: 'https://www.volkswagen.com.ar/es.html',
         },
     ];
 
