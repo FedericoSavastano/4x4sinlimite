@@ -412,6 +412,7 @@ h1 {
 
 .salidas-item:hover {
     box-shadow: 0px 5px 6px rgba(208, 183, 60, 0.438);
+    cursor: pointer;
 }
 
 .salidas-item a {
