@@ -7,7 +7,7 @@ function Map({ value }) {
     switch (value) {
         case 'la-rioja':
             srcValue =
-                'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27936.585537823794!2d-67.54257827128319!3d-28.925877182338937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969d825df9fefc37%3A0xfc089f4bcb85c5c!2sFamatina%2C%20La%20Rioja%2C%20Argentina!5e0!3m2!1ses-419!2sus!4v1736353986360!5m2!1ses-419!2sus';
+                'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6968.005278847806!2d-67.49221612464395!3d-29.164594475378383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969d64655de22455%3A0x850ec9704eea6c51!2sACA%20(Autom%C3%B3vil%20Club%20Argentino)%20Chilecito!5e0!3m2!1ses-419!2sus!4v1737385750088!5m2!1ses-419!2sus';
             break;
         case 'necochea':
             srcValue =
