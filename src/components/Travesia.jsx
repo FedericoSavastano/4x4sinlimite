@@ -4,12 +4,17 @@ import fondo from '../assets/fond1.jpg';
 import Form from './Form';
 import LogoGrid from './LogoGrid';
 import ImagesGrid from './ImagesGrid';
+import NotFound from './NotFound';
 
 function Travesia({ items }) {
     const { id } = useParams();
     console.log('travesia', items);
     const [item] = items.filter((item) => item.url === id);
-    const data = item.data[0];
+    const data = item?.data[0];
+
+    if (data === undefined) {
+        return <NotFound />;
+    }
 
     return (
         <>

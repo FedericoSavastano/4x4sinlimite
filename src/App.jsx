@@ -3,12 +3,9 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link,
-    useParams,
     useLocation,
 } from 'react-router-dom';
 import { fetchItems } from './api';
-import logo from './assets/logo-grande-D.png';
 
 import './App.css';
 
@@ -18,6 +15,7 @@ import Footer from './components/Footer';
 import Contacto from './components/Contacto';
 import Home from './components/Home';
 import Loading from './components/Loading';
+import NotFound from './components/NotFound';
 
 const Wrapper = ({ children }) => {
     const location = useLocation();
@@ -38,7 +36,7 @@ const App = () => {
         const loadItems = async () => {
             try {
                 const data = await fetchItems();
-                console.log('la data de data ', data);
+                // console.log('la data de data ', data);
                 setItems(data);
             } catch (error) {
                 console.error(error);
@@ -69,6 +67,8 @@ const App = () => {
                             element={<Travesia items={items} />}
                         />
                         <Route path='/contacto' element={<Contacto />}></Route>
+
+                        <Route path='*' element={<NotFound />} />
                     </Routes>
                 </Wrapper>
             </div>
