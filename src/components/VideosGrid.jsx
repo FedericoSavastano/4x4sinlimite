@@ -3,6 +3,9 @@ import React from 'react';
 function VideosGrid() {
     const videos = [
         {
+            src: 'https://www.youtube.com/embed/H7zJHtQM4y0?si=2DgJucSD3_tu0DAz',
+        },
+        {
             src: 'https://www.youtube.com/embed/axunSOv3Gn4?si=AnBQmtARzDba1s7N',
         },
         {
@@ -10,9 +13,6 @@ function VideosGrid() {
         },
         {
             src: 'https://www.youtube.com/embed/MN-DIzh9eug?si=AjDKFOX-VLVXk-Ku',
-        },
-        {
-            src: 'https://www.youtube.com/embed/3hZ8_EOPXyo?si=kxtmfSAsvOhQM8NB',
         },
     ];
     return (
