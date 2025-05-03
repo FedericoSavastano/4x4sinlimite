@@ -3,7 +3,7 @@ import React from 'react';
 function VideosGrid() {
     const videos = [
         {
-            src: 'https://youtu.be/kQkBb-1YemU?si=zZTxY8FlxtA5Rk0-',
+            src: 'https://www.youtube.com/embed/kQkBb-1YemU?si=lYEXn7CxHR2NrZfo',
         },
         {
             src: 'https://www.youtube.com/embed/H7zJHtQM4y0?si=2DgJucSD3_tu0DAz',
