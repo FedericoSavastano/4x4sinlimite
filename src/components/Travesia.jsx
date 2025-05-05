@@ -70,7 +70,7 @@ function Travesia({ items }) {
             </ul>
             <h4 className='titulo-seccion'>Elementos necesarios</h4>
             <ul>
-                <li> Debés contar con vehículo 4x4 con alta y baja, propio.</li>
+                <li> Debés contar con vehículo 4x4 propio</li>
                 <li>Radio VHF (Si no tenés, te prestamos)</li>
                 <li>Pala, Eslinga, Medidor de presión de cubiertas</li>
             </ul>
