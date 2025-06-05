@@ -29,6 +29,11 @@ function Map({ value }) {
             srcValue =
                 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6584508193687!2d-68.34192492441433!3d-34.61279727295097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9679080602c66143%3A0xfb0fbbe46f032e64!2sTower%20Inn%20%26%20Suites!5e0!3m2!1sen!2sar!4v1748014192970!5m2!1sen!2sar';
             break;
+
+        case 'saltacatamarca':
+            srcValue =
+                'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d924763.485897091!2d-66.1647239!3d-25.1236062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941c1e69dd665d57%3A0xac649dc931c1a299!2sYPF%20ACA%20Cachi!5e0!3m2!1sen!2sar!4v1749153962598!5m2!1sen!2sar';
+            break;
         default:
             srcValue = 'Default Derived Value';
             break;
