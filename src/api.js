@@ -8,7 +8,7 @@ export const fetchItems = async () => {
     // );
 
     const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbyOwSqOWZAEfZTP06AeJBGVwaaVchUcdCUNOwssU6cUhojciRvKnU47kx-49C3TlHlLOg/exec'
+        'https://script.google.com/macros/s/AKfycbwz_T4L9YckX7Q9layfmFSn1L33B1Ubdo-qK0XuoRXlI4qG_MRjGjLDKDS2YgI2Xetbiw/exec'
     );
 
     if (!response.ok) throw new Error('Failed to fetch items');

@@ -73,6 +73,16 @@ function Travesia({ items }) {
                 <li>Debés contar con vehículo 4x4 propio</li>
                 <li>Radio VHF</li>
                 <li>Pala, Eslinga, Medidor de presión de cubiertas</li>
+                {window.location.pathname.includes('saltacatamarca') ? (
+                    <>
+                        <li>Filtro de Aire</li>
+                        <li>Dos ruedas de auxilio</li>
+                        <li>Bidón de reserva de combustible (20 Litros)</li>
+                        <li> Se recomienda llevar abrigo y agua</li>
+                    </>
+                ) : (
+                    <></>
+                )}
             </ul>
 
             <ImagesGrid src1={data.imagen3} src2={data.imagen4}></ImagesGrid>
