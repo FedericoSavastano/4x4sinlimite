@@ -27,6 +27,13 @@ function Travesia({ items }) {
 
             <ImagesGrid src1={data.imagen1} src2={data.imagen2}></ImagesGrid>
             <h2 className='titulo-travesia'>{data.subnombre}</h2>
+            {window.location.pathname.includes('saltacatamarca') ? (
+                <>
+                    <h2>Capacidad: 10 Vehículos</h2>
+                </>
+            ) : (
+                <></>
+            )}
             <h3 className='titulo-travesia'>
                 {data.nombre} - {data.fecha}
             </h3>
