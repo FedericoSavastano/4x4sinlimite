@@ -38,6 +38,10 @@ function Map({ value }) {
             srcValue =
                 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d924763.485897091!2d-66.1647239!3d-25.1236062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941c1e69dd665d57%3A0xac649dc931c1a299!2sYPF%20ACA%20Cachi!5e0!3m2!1sen!2sar!4v1749153962598!5m2!1sen!2sar';
             break;
+        case 'pinamar-septiembre':
+            srcValue =
+                'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.838227150518!2d-56.88094332429756!3d-37.1089681721607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9d273d0d8e4b%3A0xd9f0bfa98bd456da!2sShell!5e0!3m2!1ses-419!2sus!4v1736376981757!5m2!1ses-419!2sus';
+            break;
         default:
             srcValue = 'Default Derived Value';
             break;
