@@ -27,7 +27,7 @@ function Home({ items }) {
       </section>
 
       <section className="section">
-        <h1 style={{ textAlign: "center" }}>NOS REENCONTRAMOS EN 2025</h1>
+        <h1 style={{ textAlign: "center" }}>NOS REENCONTRAMOS EN 2026</h1>
         {/* <h1 className='titulo-home'>Próximas Salidas</h1>
                 <div className='salidas-container'>
                     {items.map((item, index) =>
