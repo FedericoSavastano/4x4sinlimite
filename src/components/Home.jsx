@@ -27,36 +27,28 @@ function Home({ items }) {
       </section>
 
       <section className="section">
-        <h1 style={{ textAlign: "center" }}>NOS REENCONTRAMOS EN 2026</h1>
-        {/* <h1 className='titulo-home'>Próximas Salidas</h1>
-                <div className='salidas-container'>
-                    {items.map((item, index) =>
-                        item.data[0].realizada === 'no' ? (
-                            <div
-                                key={item.data[0].url}
-                                className='salidas-item'>
-                                <Link to={`/${item.data[0].url}`}>
-                                    <img
-                                        src={item.data[0].imagen_home}
-                                        alt={
-                                            item.data[0].url ||
-                                            `Logo ${index + 1}`
-                                        }
-                                        className='img-x'
-                                    />
-                                    <h3 className='salidas-titulo'>
-                                        {item.data[0].nombre}{' '}
-                                    </h3>
-                                    <span className='salidas-subtitulo'>
-                                        {item.data[0].subnombre}
-                                    </span>
-                                </Link>
-                            </div>
-                        ) : (
-                            <></>
-                        )
-                    )}
-                </div> */}
+        <h1 className="titulo-home">Próximas Salidas</h1>
+        <div className="salidas-container">
+          {items.map((item, index) =>
+            item.data[0].realizada === "no" ? (
+              <div key={item.data[0].url} className="salidas-item">
+                <Link to={`/${item.data[0].url}`}>
+                  <img
+                    src={item.data[0].imagen_home}
+                    alt={item.data[0].url || `Logo ${index + 1}`}
+                    className="img-x"
+                  />
+                  <h3 className="salidas-titulo">{item.data[0].nombre} </h3>
+                  <span className="salidas-subtitulo">
+                    {item.data[0].subnombre}
+                  </span>
+                </Link>
+              </div>
+            ) : (
+              <></>
+            )
+          )}
+        </div>
       </section>
 
       <section className="section">
