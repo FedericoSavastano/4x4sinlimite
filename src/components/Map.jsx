@@ -42,6 +42,10 @@ function Map({ value }) {
             srcValue =
                 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.838227150518!2d-56.88094332429756!3d-37.1089681721607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9d273d0d8e4b%3A0xd9f0bfa98bd456da!2sShell!5e0!3m2!1ses-419!2sus!4v1736376981757!5m2!1ses-419!2sus';
             break;
+
+        case 'catamarca': 
+            srcValue = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.6993532193!2d-67.66516222943108!3d-27.685043905718388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e30f162b7c3bf%3A0xd70071b33b64eb44!2sFiambala%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1778282749002!5m2!1ses-419!2sar'
+            break;
         default:
             srcValue = 'Default Derived Value';
             break;
