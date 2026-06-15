@@ -69,6 +69,13 @@ function Travesia({ items }) {
             <h4 className='titulo-seccion'>Incluye</h4>
             <ul>
                 <li> Alojamiento en hotel</li>
+                 {window.location.pathname.includes('pinamar-invierno') ? (
+                <>
+                    <li>Arenas en Pinamar: Noche del viernes y del sabado</li>
+                </>
+            ) : (
+                <></>
+            )}
                 <li>
                     Desayuno, almuerzo y cena (No incluye bebidas alcoholicas)
                 </li>
