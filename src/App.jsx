@@ -1,80 +1,71 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { lazy, Suspense, useLayoutEffect } from 'react';
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    useLocation,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
 } from 'react-router-dom';
-import { fetchItems } from './api';
+import { useItems } from './hooks/useItems';
 
 import './App.css';
 
-import Travesia from './components/Travesia';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Contacto from './components/Contacto';
 import Home from './components/Home';
 import Loading from './components/Loading';
-import NotFound from './components/NotFound';
 
-const Wrapper = ({ children }) => {
-    const location = useLocation();
+// Se descargan recién cuando se visita la ruta
+const Travesia = lazy(() => import('./components/Travesia'));
+const Contacto = lazy(() => import('./components/Contacto'));
+const NotFound = lazy(() => import('./components/NotFound'));
 
-    useLayoutEffect(() => {
-        // Scroll to the top of the page when the route changes
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, [location.pathname]);
+const EMPTY = [];
 
-    return children;
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname]);
+
+  return null;
 };
 
+const ErrorMessage = ({ onRetry }) => (
+  <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
+    <p>No pudimos cargar la información.</p>
+    <button onClick={onRetry}>Reintentar</button>
+  </div>
+);
+
 const App = () => {
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const { data, isPending, isError, refetch } = useItems();
+  const items = data ?? EMPTY;
 
-    useEffect(() => {
-        const loadItems = async () => {
-            try {
-                const data = await fetchItems();
-                // console.log('la data de data ', data);
-                setItems(data);
-            } catch (error) {
-                console.error(error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        loadItems();
-    }, []);
+  // Solo las rutas que necesitan datos esperan; el resto se muestra siempre
+  const withData = (element) => {
+    if (isPending) return <Loading />;
+    if (isError && !items.length) return <ErrorMessage onRetry={refetch} />;
+    return element;
+  };
 
-    if (loading) return <Loading></Loading>;
-
-    return (
-        <Router>
-            <Navbar items={items} />
-            <div
-                className='content'
-                style={{ minHeight: 'calc(100vh - 100px)' }}>
-                <Wrapper>
-                    <Routes>
-                        <Route path='/' element={<Home items={items} />} />
-
-                        <Route path='/spin' element={<Loading />} />
-
-                        {/* Dynamic Route for Item Details */}
-                        <Route
-                            path='/:id'
-                            element={<Travesia items={items} />}
-                        />
-                        <Route path='/contacto' element={<Contacto />}></Route>
-
-                        <Route path='*' element={<NotFound />} />
-                    </Routes>
-                </Wrapper>
-            </div>
-            <Footer />
-        </Router>
-    );
+  return (
+    <Router>
+      <ScrollToTop />
+      <Navbar items={items} />
+      <div className='content' style={{ minHeight: 'calc(100vh - 100px)' }}>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path='/' element={withData(<Home items={items} />)} />
+            <Route path='/contacto' element={<Contacto />} />
+            <Route path='/:id' element={withData(<Travesia items={items} />)} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </div>
+      <Footer />
+    </Router>
+  );
 };
 
 export default App;
